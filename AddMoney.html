@@ -16,14 +16,14 @@
     rel="stylesheet"
 />
 </head>
-<body class="bg-[#F4F5F7] h-[100vh]">
-<div class="min-h-[200px] bg-white">
+<body class="bg-[#F4F5F7] h-full">
+<div class="min-h-[480px] bg-white">
     <!-- nav -->
-    <div class=" w-full min-h-[80px] flex items-center justify-between bg-white p-4 shadow-[0_4px_6px_rgba(0,0,0,0.5)]">
+    <div class=" w-full min-h-[80px] flex items-center justify-between bg-white p-4 shadow-[0_2px_6px_rgba(0,0,0,0.5)]">
         <div class="flex items-center">
             <img class="w-14" src="./assets/Group.png" alt="">
             <div class="mx-2">
-                <h2 class="my-1.5 outfit">$<span class="font-bold text-[20px]">45000</span></h2>
+                <h2 class="my-1.5 outfit"><span class="font-bold text-[20px]">$ <span id="money">45000</span></span></h2>
                 <p class="outfit text-gray-500">Available Balance</p>
             </div>
         </div>
@@ -35,19 +35,57 @@
     <!-- body -->
      
     <!--title  -->
-    <div class="">
-        <h1><i class="ri-fire-fill text-amber-600"></i><span>Welcome to Payoo</span></h1>
-        <p>Enjoy easy and convenient financial services with us. Cashout charge is low and </p>
+    <div class="w-10/11 mx-auto mt-[30px]">
+        <h1 class="outfit font-extrabold text-[24px]"> <i class="ri-fire-fill text-amber-600"></i><span class="font-bold">Welcome to Payoo</span></h1>
+        <p class="text-[16px] text-gray-500">Enjoy easy and convenient financial services with us. Cashout charge is low and </p>
      </div>
 
 
      <!-- icon -->
-     <div class="">
-        <div class="">
-        <i></i>
-        <p></p>
-        </div>
-     </div>
+      <div class="w-10/11 mx-auto mt-[24px] grid grid-cols-3 gap-4">
+
+        <button class="btn btn-xs sm:btn-sm md:btn-md lg:btn-lg xl:btn-xl outfit flex flex-col py-[50px] text-[16px] rounded-[12px] text-[#00c3ff] bg-white border-0.5 border-gray-300 hover:bg-[#00c3ff] duration-500 hover:text-white hover:scale-[1.05]"> <img src="./assets/wallet1.png" alt="">Add Money</button>
+        
+        <button class="btn btn-xs sm:btn-sm md:btn-md lg:btn-lg xl:btn-xl outfit flex flex-col py-[50px] px-[20px] text-[16px] rounded-[12px] text-[#00c3ff] bg-white border-0.5 border-gray-300 hover:bg-[#00c3ff] duration-500 hover:text-white hover:scale-[1.05]"><img src="./assets/send1.png" alt="">Cashout</button>
+
+        <button class="btn btn-xs sm:btn-sm md:btn-md lg:btn-lg xl:btn-xl outfit flex flex-col py-[50px] px-[30px] text-[16px] rounded-[12px] text-[#00c3ff] bg-white border-0.5 border-gray-300 hover:bg-[#00c3ff] duration-500 hover:text-white hover:scale-[1.05]"><img src="./assets/money1.png" alt="">Transfer Money</button>
+
+        <button class="btn btn-xs sm:btn-sm md:btn-md lg:btn-lg xl:btn-xl outfit flex flex-col py-[50px] px-[30px] text-[16px] rounded-[12px] text-[#00c3ff] bg-white border-0.5 border-gray-300 hover:bg-[#00c3ff] duration-500 hover:text-white hover:scale-[1.05]"><img src="./assets/bonus1.png" alt="">Get Bonus</button>
+
+        <button class="btn btn-xs sm:btn-sm md:btn-md lg:btn-lg xl:btn-xl outfit flex flex-col py-[50px] px-[30px] text-[16px] rounded-[12px] text-[#00c3ff] bg-white border-0.5 border-gray-300 hover:bg-[#00c3ff] duration-500 hover:text-white hover:scale-[1.05]"><img src="./assets/purse1.png" alt="">Pay Bill</button>
+
+        <button class="btn btn-xs sm:btn-sm md:btn-md lg:btn-lg xl:btn-xl outfit flex flex-col py-[50px] px-[30px] text-[16px] rounded-[12px] text-[#00c3ff] bg-white border-0.5 border-gray-300 hover:bg-[#00c3ff]  hover:text-white hover:scale-[1.05] duration-500"><img src="./assets/transaction1.png" alt=""> Transaction</button>
+
+    </div>
 </div>
+
+<!-- add  money -->
+<div class="w-10/11 mx-auto mt-[40px] pb-[120px]">
+
+    <h1 class="outfit font-bold mb-[5px] text-[18px]">Add Money</h1>
+
+    <fieldset id="form" class="fieldset bg-base-200 border-base-300 rounded-box border p-4 bg-white">
+
+  <label  class="label text-[16px] outfit text-black pt-[16px]">Select A Bank</label>
+  <input id="selectBank" type="text" class="input mx-auto w-10/10 bg-gray-100 rounded-[32px] border-none focus:outline-none focus:ring-1 focus:ring-cyan-600" placeholder="Email" />
+
+  <label class="label text-[16px] outfit text-black pt-[16px]">Bank Account Number</label>
+  <input id="accountNumber"  type="password" class="input mx-auto w-10/10 bg-gray-100 rounded-[32px] border-none focus:outline-none focus:ring-1 focus:ring-cyan-600" placeholder="Password" maxlength="11"/>
+
+  <label class="label text-[16px] outfit text-black pt-[16px]">Amount To Add</label>
+  <input id="addAmount" type="number" class="input mx-auto w-10/10 bg-gray-100 rounded-[32px] border-none focus:outline-none focus:ring-1 focus:ring-cyan-600" placeholder="Password" />
+
+  <label  class="label text-[16px] outfit text-black pt-[16px]">Pin Number</label>
+  <input id="password" type="password" class="input mx-auto w-10/10 bg-gray-100 rounded-[32px] border-none focus:outline-none focus:ring-1 focus:ring-cyan-600"  placeholder="Password" />
+
+  <button id="addmoneybtn" class="btn btn-neutral mt-4 bg-[#0874F2] border-none rounded-[32px]">Add Money</button>
+</fieldset>
+</div>
+<!-- cashout -->
+ <div>
+    <h1 class="outfit font-bold text-[18px]">Cashout</h1>
+ </div>
+
+<script src="./addMoney.js"></script>
 </body>
 </html>
